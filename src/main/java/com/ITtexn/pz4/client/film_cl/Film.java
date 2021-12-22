@@ -1,0 +1,269 @@
+
+package com.ITtexn.pz4.client.film_cl;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import java.sql.Date;
+import java.util.List;
+
+
+/**
+ * <p>Java class for film complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="film">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="description12" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="director" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="filmDuration" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="genre" type="{http://film.service.pz4.ITtexn.com/}genre" minOccurs="0"/>
+ *         &lt;element name="id_film" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="language" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "film", propOrder = {
+    "description12",
+    "director",
+    "filmDuration",
+    "genre",
+    "idFilm",
+    "language",
+    "title"
+})
+public class Film {
+
+    protected String description12;
+    protected String director;
+    protected String filmDuration;
+    @XmlSchemaType(name = "string")
+    protected Genre genre;
+    @XmlElement(name = "id_film")
+    protected int idFilm;
+    protected String language;
+    protected String title;
+
+    /**
+     * Gets the value of the description12 property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDescription12() {
+        return description12;
+    }
+
+    /**
+     * Sets the value of the description12 property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription12(String value) {
+        this.description12 = value;
+    }
+
+    /**
+     * Gets the value of the director property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDirector() {
+        return director;
+    }
+
+    /**
+     * Sets the value of the director property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDirector(String value) {
+        this.director = value;
+    }
+
+    /**
+     * Gets the value of the filmDuration property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFilmDuration() {
+        return filmDuration;
+    }
+
+    /**
+     * Sets the value of the filmDuration property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFilmDuration(String value) {
+        this.filmDuration = value;
+    }
+
+    /**
+     * Gets the value of the genre property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Genre }
+     *     
+     */
+    public Genre getGenre() {
+        return genre;
+    }
+
+    /**
+     * Sets the value of the genre property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Genre }
+     *     
+     */
+    public void setGenre(Genre value) {
+        this.genre = value;
+    }
+
+    /**
+     * Gets the value of the idFilm property.
+     * 
+     */
+    public int getIdFilm() {
+        return idFilm;
+    }
+
+    /**
+     * Sets the value of the idFilm property.
+     * 
+     */
+    public void setIdFilm(int value) {
+        this.idFilm = value;
+    }
+
+    /**
+     * Gets the value of the language property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLanguage() {
+        return language;
+    }
+
+    /**
+     * Sets the value of the language property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLanguage(String value) {
+        this.language = value;
+    }
+
+    /**
+     * Gets the value of the title property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * Sets the value of the title property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTitle(String value) {
+        this.title = value;
+    }
+
+    public static class Builder {
+        private Film newFilm;
+
+        public Builder() {
+            newFilm = new Film();
+        }
+
+        public Film.Builder id(int idFilm) {
+            newFilm.idFilm = idFilm;
+            return this;
+        }
+
+        public Film.Builder director(String director) {
+            newFilm.director = director;
+            return this;
+        }
+
+        public Film.Builder genre (Genre genre) {
+            newFilm.genre = genre;
+            return this;
+        }
+
+        public Film.Builder description(String description) {
+            newFilm.description12 = description;
+            return this;
+        }
+
+        public Film.Builder title(String title) {
+            newFilm.title = title;
+            return this;
+        }
+
+        public Film.Builder filmDuration (String filmDuration) {
+            newFilm.filmDuration = filmDuration;
+            return this;
+        }
+
+
+        public Film.Builder language(String language ) {
+            newFilm.language = language;
+            return this;
+        }
+
+        public Film build() {
+            return newFilm;
+        }
+
+    }
+
+}
