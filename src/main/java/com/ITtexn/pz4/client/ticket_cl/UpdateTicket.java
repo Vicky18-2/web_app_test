@@ -18,12 +18,10 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="arg1" type="{http://ticket.service.pz4.ITtexn.com/}session" minOccurs="0"/>
- *         &lt;element name="arg2" type="{http://ticket.service.pz4.ITtexn.com/}film" minOccurs="0"/>
- *         &lt;element name="arg3" type="{http://ticket.service.pz4.ITtexn.com/}hall" minOccurs="0"/>
+ *         &lt;element name="arg2" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="arg3" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="arg4" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="arg5" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="arg6" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="arg7" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="arg5" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,20 +37,16 @@ import javax.xml.bind.annotation.XmlType;
     "arg2",
     "arg3",
     "arg4",
-    "arg5",
-    "arg6",
-    "arg7"
+    "arg5"
 })
 public class UpdateTicket {
 
     protected int arg0;
     protected Session arg1;
-    protected Film arg2;
-    protected Hall arg3;
+    protected int arg2;
+    protected int arg3;
     protected int arg4;
-    protected int arg5;
-    protected int arg6;
-    protected boolean arg7;
+    protected boolean arg5;
 
     /**
      * Gets the value of the arg0 property.
@@ -97,48 +91,32 @@ public class UpdateTicket {
     /**
      * Gets the value of the arg2 property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Film }
-     *     
      */
-    public Film getArg2() {
+    public int getArg2() {
         return arg2;
     }
 
     /**
      * Sets the value of the arg2 property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Film }
-     *     
      */
-    public void setArg2(Film value) {
+    public void setArg2(int value) {
         this.arg2 = value;
     }
 
     /**
      * Gets the value of the arg3 property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Hall }
-     *     
      */
-    public Hall getArg3() {
+    public int getArg3() {
         return arg3;
     }
 
     /**
      * Sets the value of the arg3 property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Hall }
-     *     
      */
-    public void setArg3(Hall value) {
+    public void setArg3(int value) {
         this.arg3 = value;
     }
 
@@ -162,7 +140,7 @@ public class UpdateTicket {
      * Gets the value of the arg5 property.
      * 
      */
-    public int getArg5() {
+    public boolean isArg5() {
         return arg5;
     }
 
@@ -170,40 +148,8 @@ public class UpdateTicket {
      * Sets the value of the arg5 property.
      * 
      */
-    public void setArg5(int value) {
+    public void setArg5(boolean value) {
         this.arg5 = value;
-    }
-
-    /**
-     * Gets the value of the arg6 property.
-     * 
-     */
-    public int getArg6() {
-        return arg6;
-    }
-
-    /**
-     * Sets the value of the arg6 property.
-     * 
-     */
-    public void setArg6(int value) {
-        this.arg6 = value;
-    }
-
-    /**
-     * Gets the value of the arg7 property.
-     * 
-     */
-    public boolean isArg7() {
-        return arg7;
-    }
-
-    /**
-     * Sets the value of the arg7 property.
-     * 
-     */
-    public void setArg7(boolean value) {
-        this.arg7 = value;
     }
 
 }

@@ -31,13 +31,13 @@ public class TicketServiceImplement implements TicketService {
     };
 
     @WebMethod
-    public void insertTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus  ){
-        ticketCreation.insertTicket(ticketPrice,session,film,hall,idTicket,idSeat,idColumn,ticketStatus);
+    public void insertTicket(int ticketPrice, Session session,  int idTicket, int idSeat, int idColumn, boolean ticketStatus  ){
+        ticketCreation.insertTicket(ticketPrice,session,idTicket,idSeat,idColumn,ticketStatus);
     };
 
     @WebMethod
-    public void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus  ){
-        ticketCreation.updateTicket(ticketPrice,session,film,hall,idTicket, idSeat,idColumn,ticketStatus);
+    public void updateTicket(int ticketPrice, Session session,  int idTicket, int idSeat, int idColumn, boolean ticketStatus  ){
+        ticketCreation.updateTicket(ticketPrice,session,idTicket, idSeat,idColumn,ticketStatus);
     };
 
     @WebMethod

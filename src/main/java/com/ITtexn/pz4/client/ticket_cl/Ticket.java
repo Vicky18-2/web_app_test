@@ -16,8 +16,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="film" type="{http://ticket.service.pz4.ITtexn.com/}film" minOccurs="0"/>
- *         &lt;element name="hall" type="{http://ticket.service.pz4.ITtexn.com/}hall" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idColumn" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idSeat" type="{http://www.w3.org/2001/XMLSchema}int"/>
@@ -34,8 +32,6 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ticket", propOrder = {
-    "film",
-    "hall",
     "id",
     "idColumn",
     "idSeat",
@@ -45,62 +41,12 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Ticket {
 
-    protected Film film;
-    protected Hall hall;
     protected int id;
     protected int idColumn;
     protected int idSeat;
     protected Session session;
     protected int ticketPrice;
     protected boolean ticketStatus;
-
-    /**
-     * Gets the value of the film property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Film }
-     *     
-     */
-    public Film getFilm() {
-        return film;
-    }
-
-    /**
-     * Sets the value of the film property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Film }
-     *     
-     */
-    public void setFilm(Film value) {
-        this.film = value;
-    }
-
-    /**
-     * Gets the value of the hall property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Hall }
-     *     
-     */
-    public Hall getHall() {
-        return hall;
-    }
-
-    /**
-     * Sets the value of the hall property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Hall }
-     *     
-     */
-    public void setHall(Hall value) {
-        this.hall = value;
-    }
 
     /**
      * Gets the value of the id property.

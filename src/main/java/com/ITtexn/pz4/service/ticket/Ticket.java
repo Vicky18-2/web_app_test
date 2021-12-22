@@ -15,10 +15,6 @@ public class Ticket {
 
     protected Session session;
 
-    protected Film film;
-
-    protected Hall hall;
-
     protected int idTicket;
 
     protected int idSeat;
@@ -42,22 +38,6 @@ public class Ticket {
 
     public void setSession(Session value) {
         this.session = value;
-    }
-
-    public Film getFilm() {
-        return film;
-    }
-
-    public void setFilm(Film value) {
-        this.film = value;
-    }
-
-    public Hall getHall() {
-        return hall;
-    }
-
-    public void setHall(Hall value) {
-        this.hall = value;
     }
 
     public int getId() {
@@ -95,8 +75,6 @@ public class Ticket {
         return "Ticket{" +
                 "ticketPrice=" + ticketPrice +
                 ", session=" + session +
-                ", film=" + film +
-                ", hall=" + hall +
                 ", idTicket=" + idTicket +
                 ", idSeat=" + idSeat +
                 ", idColumn=" + idColumn +
@@ -104,11 +82,9 @@ public class Ticket {
                 '}';
     }
 
-    public Ticket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus) {
+    public Ticket(int ticketPrice, Session session, int idTicket, int idSeat, int idColumn, boolean ticketStatus) {
         this.ticketPrice = ticketPrice;
         this.session = session;
-        this.film = film;
-        this.hall = hall;
         this.idTicket = idTicket;
         this.idSeat = idSeat;
         this.idColumn = idColumn;

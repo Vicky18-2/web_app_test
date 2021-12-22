@@ -28,14 +28,29 @@ public interface TicketService {
     /**
      * 
      * @return
-     *     returns java.util.List<com.ITtexn.pz4.ticket_cl.Ticket>
+     *     returns java.util.List<com.ITtexn.pz4.client.ticket_cl.Ticket>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllTickets", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.GetAllTickets")
-    @ResponseWrapper(localName = "getAllTicketsResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.GetAllTicketsResponse")
+    @RequestWrapper(localName = "getAllTickets", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.GetAllTickets")
+    @ResponseWrapper(localName = "getAllTicketsResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.GetAllTicketsResponse")
     @Action(input = "http://ticket.service.pz4.ITtexn.com/TicketService/getAllTicketsRequest", output = "http://ticket.service.pz4.ITtexn.com/TicketService/getAllTicketsResponse")
     public List<Ticket> getAllTickets();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns com.ITtexn.pz4.client.ticket_cl.Ticket
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.GetTicket")
+    @ResponseWrapper(localName = "getTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.GetTicketResponse")
+    @Action(input = "http://ticket.service.pz4.ITtexn.com/TicketService/getTicketRequest", output = "http://ticket.service.pz4.ITtexn.com/TicketService/getTicketResponse")
+    public Ticket getTicket(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
     /**
      * 
@@ -45,12 +60,10 @@ public interface TicketService {
      * @param arg4
      * @param arg1
      * @param arg0
-     * @param arg7
-     * @param arg6
      */
     @WebMethod
-    @RequestWrapper(localName = "insertTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.InsertTicket")
-    @ResponseWrapper(localName = "insertTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.InsertTicketResponse")
+    @RequestWrapper(localName = "insertTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.InsertTicket")
+    @ResponseWrapper(localName = "insertTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.InsertTicketResponse")
     @Action(input = "http://ticket.service.pz4.ITtexn.com/TicketService/insertTicketRequest", output = "http://ticket.service.pz4.ITtexn.com/TicketService/insertTicketResponse")
     public void insertTicket(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -58,17 +71,13 @@ public interface TicketService {
         @WebParam(name = "arg1", targetNamespace = "")
         Session arg1,
         @WebParam(name = "arg2", targetNamespace = "")
-        Film arg2,
+        int arg2,
         @WebParam(name = "arg3", targetNamespace = "")
-        Hall arg3,
+        int arg3,
         @WebParam(name = "arg4", targetNamespace = "")
         int arg4,
         @WebParam(name = "arg5", targetNamespace = "")
-        int arg5,
-        @WebParam(name = "arg6", targetNamespace = "")
-        int arg6,
-        @WebParam(name = "arg7", targetNamespace = "")
-        boolean arg7);
+        boolean arg5);
 
     /**
      * 
@@ -78,12 +87,10 @@ public interface TicketService {
      * @param arg4
      * @param arg1
      * @param arg0
-     * @param arg7
-     * @param arg6
      */
     @WebMethod
-    @RequestWrapper(localName = "updateTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.UpdateTicket")
-    @ResponseWrapper(localName = "updateTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.UpdateTicketResponse")
+    @RequestWrapper(localName = "updateTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.UpdateTicket")
+    @ResponseWrapper(localName = "updateTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.UpdateTicketResponse")
     @Action(input = "http://ticket.service.pz4.ITtexn.com/TicketService/updateTicketRequest", output = "http://ticket.service.pz4.ITtexn.com/TicketService/updateTicketResponse")
     public void updateTicket(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -91,25 +98,21 @@ public interface TicketService {
         @WebParam(name = "arg1", targetNamespace = "")
         Session arg1,
         @WebParam(name = "arg2", targetNamespace = "")
-        Film arg2,
+        int arg2,
         @WebParam(name = "arg3", targetNamespace = "")
-        Hall arg3,
+        int arg3,
         @WebParam(name = "arg4", targetNamespace = "")
         int arg4,
         @WebParam(name = "arg5", targetNamespace = "")
-        int arg5,
-        @WebParam(name = "arg6", targetNamespace = "")
-        int arg6,
-        @WebParam(name = "arg7", targetNamespace = "")
-        boolean arg7);
+        boolean arg5);
 
     /**
      * 
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "deleteTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.DeleteTicket")
-    @ResponseWrapper(localName = "deleteTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.DeleteTicketResponse")
+    @RequestWrapper(localName = "deleteTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.DeleteTicket")
+    @ResponseWrapper(localName = "deleteTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.DeleteTicketResponse")
     @Action(input = "http://ticket.service.pz4.ITtexn.com/TicketService/deleteTicketRequest", output = "http://ticket.service.pz4.ITtexn.com/TicketService/deleteTicketResponse")
     public void deleteTicket(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -122,24 +125,9 @@ public interface TicketService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "countTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.CountTicket")
-    @ResponseWrapper(localName = "countTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.CountTicketResponse")
+    @RequestWrapper(localName = "countTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.CountTicket")
+    @ResponseWrapper(localName = "countTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.client.ticket_cl.CountTicketResponse")
     @Action(input = "http://ticket.service.pz4.ITtexn.com/TicketService/countTicketRequest", output = "http://ticket.service.pz4.ITtexn.com/TicketService/countTicketResponse")
     public int countTicket();
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns com.ITtexn.pz4.ticket_cl.Ticket
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTicket", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.GetTicket")
-    @ResponseWrapper(localName = "getTicketResponse", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", className = "com.ITtexn.pz4.ticket_cl.GetTicketResponse")
-    @Action(input = "http://ticket.service.pz4.ITtexn.com/TicketService/getTicketRequest", output = "http://ticket.service.pz4.ITtexn.com/TicketService/getTicketResponse")
-    public Ticket getTicket(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
 
 }
