@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
     "idHall",
     "seatQuantity"
 })
-public class Hall {
+public class Hall extends com.ITtexn.pz4.client.session_cl.Hall {
 
     protected int columnQuantity;
     protected String hallType;

@@ -157,4 +157,14 @@ public class Session {
         this.sessionTime = value;
     }
 
+    @Override
+    public String toString() {
+        return "Session{" +
+                "film=" + film +
+                ", hall=" + hall +
+                ", idSession=" + idSession +
+                ", sessionDate='" + sessionDate + '\'' +
+                ", sessionTime='" + sessionTime + '\'' +
+                '}';
+    }
 }

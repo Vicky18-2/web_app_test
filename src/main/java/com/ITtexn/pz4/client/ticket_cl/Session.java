@@ -45,6 +45,17 @@ public class Session {
     protected String sessionDate;
     protected String sessionTime;
 
+    @Override
+    public String toString() {
+        return "Session{" +
+                "film=" + film +
+                ", hall=" + hall +
+                ", idSession=" + idSession +
+                ", sessionDate='" + sessionDate + '\'' +
+                ", sessionTime='" + sessionTime + '\'' +
+                '}';
+    }
+
     /**
      * Gets the value of the film property.
      * 
