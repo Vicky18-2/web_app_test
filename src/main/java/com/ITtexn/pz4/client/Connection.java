@@ -10,8 +10,7 @@ import com.ITtexn.pz4.client.hall_cl.HallServiceImplementService;
 
 
 
-import com.ITtexn.pz4.client.ticket_cl.TicketService;
-import com.ITtexn.pz4.client.ticket_cl.TicketServiceImplementService;
+
 
 
 import java.net.URL;

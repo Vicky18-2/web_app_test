@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "TicketServiceImplementService", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", wsdlLocation = "http://localhost:7777/ticket?wsdl")
+@WebServiceClient(name = "TicketServiceImplementService", targetNamespace = "http://ticket.service.pz4.ITtexn.com/", wsdlLocation = "http://localhost:7777/ticket?wsdl")
 public class TicketServiceImplementService
     extends Service
 {
 
     private final static URL TICKETSERVICEIMPLEMENTSERVICE_WSDL_LOCATION;
     private final static WebServiceException TICKETSERVICEIMPLEMENTSERVICE_EXCEPTION;
-    private final static QName TICKETSERVICEIMPLEMENTSERVICE_QNAME = new QName("http://ticket.service.pz3.ITtexn.com/", "TicketServiceImplementService");
+    private final static QName TICKETSERVICEIMPLEMENTSERVICE_QNAME = new QName("http://ticket.service.pz4.ITtexn.com/", "TicketServiceImplementService");
 
     static {
         URL url = null;
@@ -69,7 +69,7 @@ public class TicketServiceImplementService
      */
     @WebEndpoint(name = "TicketServiceImplementPort")
     public TicketService getTicketServiceImplementPort() {
-        return super.getPort(new QName("http://ticket.service.pz3.ITtexn.com/", "TicketServiceImplementPort"), TicketService.class);
+        return super.getPort(new QName("http://ticket.service.pz4.ITtexn.com/", "TicketServiceImplementPort"), TicketService.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class TicketServiceImplementService
      */
     @WebEndpoint(name = "TicketServiceImplementPort")
     public TicketService getTicketServiceImplementPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://ticket.service.pz3.ITtexn.com/", "TicketServiceImplementPort"), TicketService.class, features);
+        return super.getPort(new QName("http://ticket.service.pz4.ITtexn.com/", "TicketServiceImplementPort"), TicketService.class, features);
     }
 
     private static URL __getWsdlLocation() {

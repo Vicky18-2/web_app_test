@@ -16,12 +16,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="film" type="{http://ticket.service.pz3.ITtexn.com/}film" minOccurs="0"/>
- *         &lt;element name="hall" type="{http://ticket.service.pz3.ITtexn.com/}hall" minOccurs="0"/>
+ *         &lt;element name="film" type="{http://ticket.service.pz4.ITtexn.com/}film" minOccurs="0"/>
+ *         &lt;element name="hall" type="{http://ticket.service.pz4.ITtexn.com/}hall" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idColumn" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idSeat" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="session" type="{http://ticket.service.pz3.ITtexn.com/}session" minOccurs="0"/>
+ *         &lt;element name="session" type="{http://ticket.service.pz4.ITtexn.com/}session" minOccurs="0"/>
  *         &lt;element name="ticketPrice" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="ticketStatus" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
@@ -53,20 +53,6 @@ public class Ticket {
     protected Session session;
     protected int ticketPrice;
     protected boolean ticketStatus;
-
-    @Override
-    public String toString() {
-        return "Ticket{" +
-                "film=" + film +
-                ", hall=" + hall +
-                ", id=" + id +
-                ", idColumn=" + idColumn +
-                ", idSeat=" + idSeat +
-                ", session=" + session +
-                ", ticketPrice=" + ticketPrice +
-                ", ticketStatus=" + ticketStatus +
-                '}';
-    }
 
     /**
      * Gets the value of the film property.

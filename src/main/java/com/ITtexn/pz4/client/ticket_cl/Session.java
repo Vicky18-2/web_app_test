@@ -16,8 +16,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="film" type="{http://ticket.service.pz3.ITtexn.com/}film" minOccurs="0"/>
- *         &lt;element name="hall" type="{http://ticket.service.pz3.ITtexn.com/}hall" minOccurs="0"/>
+ *         &lt;element name="film" type="{http://ticket.service.pz4.ITtexn.com/}film" minOccurs="0"/>
+ *         &lt;element name="hall" type="{http://ticket.service.pz4.ITtexn.com/}hall" minOccurs="0"/>
  *         &lt;element name="idSession" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="sessionDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="sessionTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -45,29 +45,6 @@ public class Session {
     protected String sessionDate;
     protected String sessionTime;
 
-    public Session(Film film, Hall hall, int idSession, String sessionDate, String sessionTime) {
-        this.film = film;
-        this.hall = hall;
-        this.idSession = idSession;
-        this.sessionDate = sessionDate;
-        this.sessionTime = sessionTime;
-    }
-
-    public Session(){
-
-    }
-
-    @Override
-    public String toString() {
-        return "Session{" +
-                "film=" + film +
-                ", hall=" + hall +
-                ", idSession=" + idSession +
-                ", sessionDate='" + sessionDate + '\'' +
-                ", sessionTime='" + sessionTime + '\'' +
-                '}';
-    }
-
     /**
      * Gets the value of the film property.
      * 
@@ -76,8 +53,6 @@ public class Session {
      *     {@link Film }
      *     
      */
-
-
     public Film getFilm() {
         return film;
     }

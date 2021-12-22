@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="description12" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="director" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="filmDuration" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="genre" type="{http://ticket.service.pz3.ITtexn.com/}genre" minOccurs="0"/>
+ *         &lt;element name="genre" type="{http://ticket.service.pz4.ITtexn.com/}genre" minOccurs="0"/>
  *         &lt;element name="id_film" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="language" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -55,32 +55,6 @@ public class Film {
     protected String language;
     protected String title;
 
-    public Film(String description12, String director, String filmDuration, com.ITtexn.pz4.client.ticket_cl.Genre genre, int idFilm, String language, String title) {
-        this.description12 = description12;
-        this.director = director;
-        this.filmDuration = filmDuration;
-        this.genre = genre;
-        this.idFilm = idFilm;
-        this.language = language;
-        this.title = title;
-    }
-
-    public Film(){
-
-    }
-
-    @Override
-    public String toString() {
-        return "Film{" +
-                "description12='" + description12 + '\'' +
-                ", director='" + director + '\'' +
-                ", filmDuration='" + filmDuration + '\'' +
-                ", genre=" + genre +
-                ", idFilm=" + idFilm +
-                ", language='" + language + '\'' +
-                ", title='" + title + '\'' +
-                '}';
-    }
     /**
      * Gets the value of the description12 property.
      * 

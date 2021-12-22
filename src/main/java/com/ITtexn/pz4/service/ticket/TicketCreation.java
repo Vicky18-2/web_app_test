@@ -33,6 +33,11 @@ public class TicketCreation {
     };
 
     public void insertTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus ){
+        Ticket ticket = new Ticket(ticketPrice,session,film,hall,idTicket,idSeat,idColumn,ticketStatus);
+        ticketList.add(ticket);
+    };
+
+    public void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket,int idSeat, int idColumn, boolean ticketStatus ){
         for(Ticket ticket: ticketList){
             if(ticket.getId() == idTicket) {
                 ticket.setTicketPrice(ticketPrice);
@@ -44,11 +49,6 @@ public class TicketCreation {
                 ticket.setIdSeat(idSeat);
             }
         }
-    };
-
-    public void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket,int idSeat, int idColumn, boolean ticketStatus ){
-        Ticket ticket = new Ticket(ticketPrice,session,film,hall,idTicket,idSeat,idColumn,ticketStatus);
-        ticketList.add(ticket);
     };
 
     public void deleteTicket(int idTicket){
